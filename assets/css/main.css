@@ -3886,6 +3886,10 @@ input, select, textarea {
 	
 }
 
+#intro{
+	background-color: rgba(0, 0, 0, 0.63); 
+}
+
 		#intro p {
 			font-size: 1.25em;
 		}
