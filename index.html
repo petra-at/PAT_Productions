@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 
 <html>
@@ -5,6 +6,9 @@
 		<title>PAT Productions</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Tailored web and software solutions. Specialising in end to end website and application development.">
+		<meta name="keywords" content="Freelance Website Designer, Website, Apps,  ">
+		<meta name="author" content="Petra Adu-Tei">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -34,8 +38,15 @@
 				<!-- Intro -->
 		
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						
-						<div class="inner">
+					
+
+					<div id="video-container">
+						<video playsinline autoplay muted loop id="video">
+							<source src="vids/bannerVideo.mp4" type="video/mp4">
+						</video>
+					</div>
+
+					<div class="inner">
 							<h1>PAT Productions</h1>
 							<h3>Tailored web & software solutions for you.</h3>
 							<h4>In today's digital world, <br>the success of an organisation is inextricably linked to the use of technology. 
@@ -46,10 +57,6 @@
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
 						</div>
-
-						<video playsinline autoplay muted loop id="videoDiv">
-							<source src="vids/bannerVideo.mp4" type="video/mp4">
-						</video>
 					
 					</section>
 
@@ -89,7 +96,7 @@
 						</section>
 					</section>
 
-				<!-- Two icon //solid major fa-code//-->
+				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>What we do</h2>
@@ -101,7 +108,7 @@
 									<ul>
 										<li>Impressive landing page with precise website description and HD graphics</li>
 										<li>Responsive design to fit every screen resolution - desktop, tablet, mobile</li>
-										<li>HTML5 / CSS3 & 4 / Javascript / PHP / Django development </li>
+										<li>HTML5 / CSS3 & 4 / Javascript / Angular /React/ Vue/ PHP / Python /Django </li>
 										<li>Parallax & Animations</li>
 									</ul>
 								</section>
@@ -153,6 +160,7 @@
 						</div>
 					</section>
 
+				
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
@@ -166,21 +174,23 @@
 									<form method="post" action="contactform.php">
 										<div class="fields">
 											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
+												<label for="name">Full Name</label>
+												<input type="text" name="name" id="name" required/>
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
+												<input type="text" name="email" id="email" required />
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
+												<textarea name="message" id="message" rows="5" required></textarea>
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
+											<button type="submit" name="submit" onclick="emailFunction()">Send Message</button> 
 										</ul>
+										<p id="mailSent" class="hide"> Message sent! </p>
+										<p id="mailError" class="hide">Mail server error! Try again later, or email directly</p>
 									</form>
 								</section>
 								<section>
@@ -191,7 +201,7 @@
 										</li>
 										<li>
 											<h3>Phone</h3>
-											<span>(+44) 07713692730 </span>
+											<span><a href="tel:+447713692730">(+44) 07713692730</a></span>
 										</li>
 										<!--
 										<li>
